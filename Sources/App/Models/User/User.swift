@@ -16,7 +16,7 @@ final class User: Model, Content {
     @ID(key: .id)
     var id: UUID?
     
-    @Field(key: "userId")
+    @Field(key: "user_id")
     var userId: Int?
     
     @Field(key: "email")
