@@ -16,7 +16,7 @@ final class User: Model, Content {
     @ID(key: .id)
     var id: UUID?
     
-    @Field(key: "userId")
+    @Field(key: "user_id")
     var userId: Int?
     
     @Field(key: "email")
@@ -50,7 +50,7 @@ struct CreateUser: Migration {
     func prepare(on database: Database) -> EventLoopFuture<Void> {
         let result = database.schema("users")
             .id()
-            .field("userId", .int, .required)
+            .field("user_id", .int, .required)
             .field("email", .string, .required)
             .field("password", .string, .required)
             .field("first_name", .string, .required)
