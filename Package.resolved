@@ -29,6 +29,7 @@
         }
       },
       {
+<<<<<<< HEAD
         "package": "fluent",
         "repositoryURL": "https://github.com/vapor/fluent.git",
         "state": {
@@ -56,6 +57,8 @@
         }
       },
       {
+=======
+>>>>>>> Some changes
         "package": "multipart-kit",
         "repositoryURL": "https://github.com/vapor/multipart-kit.git",
         "state": {
@@ -74,6 +77,7 @@
         }
       },
       {
+<<<<<<< HEAD
         "package": "sql-kit",
         "repositoryURL": "https://github.com/vapor/sql-kit.git",
         "state": {
@@ -101,6 +105,8 @@
         }
       },
       {
+=======
+>>>>>>> Some changes
         "package": "swift-backtrace",
         "repositoryURL": "https://github.com/swift-server/swift-backtrace.git",
         "state": {
