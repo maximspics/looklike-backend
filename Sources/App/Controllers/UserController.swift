@@ -25,7 +25,7 @@ class UserController {
             .first()
             .flatMap { user -> EventLoopFuture<String> in
                 if let _ = user {
-                    return self.results.error(message: "Пользователь \(email) уже существует!", req)
+                    return self.results.error(message: "Пользователь с таким email уже существует!", req)
                 } else {
                     return User.query(on: req.db).max(\.$userId).flatMapAlways { result -> EventLoopFuture<String> in
                         switch result {
