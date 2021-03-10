@@ -4,6 +4,10 @@ import Vapor
 
 func routes(_ app: Application) throws {
     
+    app.get { req in
+        return "Тест"
+    }
+    
     let result = Results()
     
     app.get { req in
