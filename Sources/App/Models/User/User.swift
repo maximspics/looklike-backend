@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import Vapor
 import Fluent
-import FluentPostgresDriver
+import FluentSQLiteDriver
 
-final class User: Model {
+final class User: Model, Content {
     // Name of the table or collection.
     static let schema = "users"
     

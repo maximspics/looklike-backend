@@ -7,12 +7,10 @@
 
 import Foundation
 import Fluent
-import FluentPostgresDriver
+import FluentSQLiteDriver
 
 struct CreateUser: Migration {
-    
     func prepare(on database: Database) -> EventLoopFuture<Void> {
-        
         let result = database.schema("users")
             .id()
             .field("user_id", .int, .required)
@@ -30,5 +28,4 @@ struct CreateUser: Migration {
     func revert(on database: Database) -> EventLoopFuture<Void> {
         database.schema("users").delete()
     }
-    
 }
