@@ -17,8 +17,8 @@ public func configure(_ app: Application) throws {
      */
     
     
- //   app.databases.use(.sqlite(.file("looklike_bd_2.sqlite")), as: .sqlite)
-    app.databases.use(.sqlite(.file("/Users/maximsafronov/Documents/Git/looklike-backend/looklike_db.sqlite")), as: .sqlite)
+    app.databases.use(.sqlite(.file("looklike_bd_2.sqlite")), as: .sqlite)
+ //   app.databases.use(.sqlite(.file("/Users/maximsafronov/Documents/Git/looklike-backend/looklike_db.sqlite")), as: .sqlite)
     app.migrations.add(CreateUser())
     app.migrations.add(CreateProduct())
     app.migrations.add(CreateCategory())
