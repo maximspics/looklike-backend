@@ -4,7 +4,7 @@ import Vapor
 
 func routes(_ app: Application) throws {
     
-    app.get { req in
+    app.get("test") { req in
         return "Тест"
     }
     

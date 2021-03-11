@@ -5,10 +5,11 @@
 //  Created by Maxim Safronov on 05.03.2021.
 //
 
-import Vapor
-import FluentSQLiteDriver
+import Foundation
+import Fluent
+import FluentPostgresDriver
 
-final class User: Model, Content {
+final class User: Model {
     // Name of the table or collection.
     static let schema = "users"
     
@@ -42,28 +43,5 @@ final class User: Model, Content {
         self.password = password
         self.firstName = firstName
         self.lastName = lastName
-    }
-}
-
-struct CreateUser: Migration {
-    // Prepares the database for storing User models.
-    func prepare(on database: Database) -> EventLoopFuture<Void> {
-        let result = database.schema("users")
-            .id()
-            .field("user_id", .int, .required)
-            .field("email", .string, .required)
-            .field("password", .string, .required)
-            .field("first_name", .string, .required)
-            .field("last_name", .string)
-            .create()
-        
-        let _ = User(userId: 1, email: "1", password: "1", firstName: "Админ", lastName: "Админович").save(on: database)
-        
-        return result
-    }
-
-    // Optionally reverts the changes made in the prepare method.
-    func revert(on database: Database) -> EventLoopFuture<Void> {
-        database.schema("users").delete()
     }
 }
