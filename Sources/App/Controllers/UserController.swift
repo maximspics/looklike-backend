@@ -68,7 +68,7 @@ class UserController {
                 if let user = user {
                     let result: Dictionary<String, Any> =
                         [
-                            "message": "\(user.firstName ?? ""), вы успешно зарегистрированы!",
+                            "message": "\(user.firstName ?? ""), вы успешно авторизованы!",
                             "token": "some_auth_token"
                         ]
                     return self.results.returnResult(result, req)
