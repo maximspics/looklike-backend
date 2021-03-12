@@ -9,6 +9,7 @@ import Foundation
 import Vapor
 import Fluent
 import FluentSQLiteDriver
+import FluentPostgresDriver
 
 final class Category: Model, Content {
     static let schema = "categories"

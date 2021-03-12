@@ -9,6 +9,7 @@ import Foundation
 import Vapor
 import Fluent
 import FluentSQLiteDriver
+import FluentPostgresDriver
 
 final class User: Model, Content {
     // Name of the table or collection.

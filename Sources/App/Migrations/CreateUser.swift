@@ -8,6 +8,7 @@
 import Foundation
 import Fluent
 import FluentSQLiteDriver
+import FluentPostgresDriver
 
 struct CreateUser: Migration {
     func prepare(on database: Database) -> EventLoopFuture<Void> {
